@@ -6,5 +6,58 @@
 		padding-left: 25px;
 		margin: 0;
 		border-radius: 10px;
+		box-shadow: 0px 10px 15px #111111;
 
 	}
+
+	body {
+		background-color: #ffff1a; 
+	}
+
+	p {
+		color: #ffff1a;
+
+	}
+
+	main {
+		background-color: #000000;
+		padding-left: 30px;
+		padding-right: 30px;
+		border-radius: 5px;
+		margin-left: 25%;
+		height: 110%;
+		position: absolute;
+		box-shadow: 0px 10px 15px #111111;
+	}
+
+	aside {
+		background-color: #590005;
+		color: #ffff1a;
+		position: absolute;
+		width: 22.5%;
+		height: auto;
+		border-radius: 10px;
+		box-shadow: 10px 15px 20px #111111;	
+	}
+
+	nav a{
+		color: #ffff1a;
+		text-decoration: none;
+	}
+
+	#logo {
+		margin: 15px;
+	}
+
+	 #JSlogo{
+		width: 130px;
+		height: auto;
+	}
+
+	#fig1 {
+		float: right;
+		position: relative;
+		color: #ffff1a;
+		text-align: center;
+	}
+
