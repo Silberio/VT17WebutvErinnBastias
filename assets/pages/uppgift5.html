@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="">
+	<title>Uppgift 5</title>
+</head>
+<body>
+
+<p id="par"></p>
+<script type="text/javascript">
+
+document.getElementById("par").innerHTML="boob";
+
+	function checkValidity(input) {
+		if(input.length == 13) {
+			input = removeFirstTwoDigits(input);
+		}
+		return isValidPersonalNumber(input);
+	}
+
+	function removeFirstTwoDigits(input) {
+		return input.substring(2, 13);
+	}
+
+	function isValidPersonalNumber(input) {
+		var numberArray = createArray(input);
+		console.log(numberArray[0]);
+		var value = process(input);
+		return true;
+	}
+
+	function createArray(input) {
+		var onlyNumbersString;
+		if(input.substring(6, 7) == "-") {
+			onlyNumbersString = input.substring(0, 6) + input.substring(7, 13);
+		}
+		else
+			onlyNumbersString = input;
+
+		var array = [];
+
+		for(var i; i < onlyNumbersString.length; i++){
+			array.push(Number(input.charAt(i));
+		}
+		return array;
+	}
+	function process(input) {
+
+	}
+
+	console.log("Hello, World!");
+	console.log(checkValidity("19811218-9876"));
+	console.log("Farewell, World...");
+
+</script>
+
+</body>
+</html>

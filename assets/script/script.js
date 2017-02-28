@@ -1,0 +1,2 @@
+var persnum = 0;
+
