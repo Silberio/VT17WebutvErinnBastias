@@ -3,7 +3,7 @@
 <head>
 	<title>Recept - Muggkaka</title>
 
-	<script src="../assets/script.js"></script>
+	<script src="../script/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
 	<meta charset="utf-8">
 </head>
@@ -29,10 +29,10 @@
 
 <section class="maintext" >	
 	<article id="recipe">
-
+	<!--recept från: https://www.recepten.se/recept/muggkladdkaka.html -->
 		<ul>
 			<li>
-			Ta fram en kopp som rymmer minst 2 dl.
+			Ta fram en kopp som rymmer minst 2 dl. <!--change this into x amount of cups depending on portions-->
 			<p>Mät upp smöret och smält det i mikron genom att köra på medeleffekt ca 15 sekunder tills minst hälften av smöret smält. Ta ut och rör om tills allt smör smält om det inte redan är smält.</p>
 			</li>
 
@@ -53,8 +53,66 @@
 	</article>
 </section>
 
-<section id="score">
+<section id="ingredients">
+<h2>Ingredienser</h2>
+
+<article>
+	<p>Portioner: </p>
+
+	<input type="number" id="portion" value="1"  min="1" max="5" defaultValue="1"></input>
+
+	<ul>
+
+		<li>
+			<span class="amount">20</span> gr smör
+		</li>
+
+		<li>
+			<span class="amount">1</span> msk kakao
+		</li>
+
+		<li>
+			<span class="amount">1.5</span> msk strösocker
+		</li>
+
+		<li>
+			<span class="amount">1.5</span> msk vetemjöl
+		</li>
+
+		<li>
+			<span class="amount">1.5</span> msk vispgrädde eller mjölk
+
+		</li>
+
+		<li>
+			<span class="amount">0.5</span> tsk vaniljsocker
+		</li>
+
+		<li>
+			<span class="amount">0.5</span> krm salt
+		</li>
+
+	</ul>
+
+	<script type="text/javascript">
+
+	</script>
 	
+
+</article>
+	
+</section>
+
+<section id="rating">
+	<article>
+		<p id="stars">
+			<span class="star">&#9733;</span>
+			<span class="star">&#9733;</span>
+			<span class="star">&#9733;</span>
+			<span class="star">&#9733;</span>
+			<span class="star">&#9733;</span>
+		</p>
+	</article>
 </section>
 
 </body>
