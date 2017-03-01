@@ -3,7 +3,6 @@
 <head>
 	<title>Recept - Muggkaka</title>
 
-	<script src="../script/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
 	<meta charset="utf-8">
 </head>
@@ -58,8 +57,16 @@
 
 <article>
 	<p>Portioner: </p>
+	<button type="button" id="btn">Button</button>
+	<select class="selectionMenu" id="portions">
+		<option class="portion" value="1">1 Portion</option>
+		<option class="portion" value="2">2 Portion</option>
+		<option class="portion" value="3">3 Portion</option>
+		<option class="portion" value="4">4 Portion</option>
+		<option class="portion" value="5">5 Portion</option>
+	</select>
 
-	<input type="number" id="portion" value="1"  min="1" max="5" defaultValue="1"></input>
+	<p id="test">privet mir</p>
 
 	<ul>
 
@@ -94,10 +101,7 @@
 
 	</ul>
 
-	<script type="text/javascript">
 
-	</script>
-	
 
 </article>
 	
@@ -114,6 +118,7 @@
 		</p>
 	</article>
 </section>
+<script src="../script/script.js"></script>
 
 </body>
 </html>

@@ -1,13 +1,18 @@
 	var elements = document.getElementsByClassName('amount');
+	var baseVal = [];
 
-	document.getElementById('portion').addEventListener("click", checkCurrentPortion)
+	var portion = document.getElementById('portions').addEventListener("change", checkCurrentPortion);
+	var btn = document.getElementById('btn').addEventListener("click", newFunction);
+
+	function newFunction(){
+		var listValue = document.getElementById('portions').value;
+		//this function prints the value of option in drop down list
+		var numValues = parseInt(document.getElementsByClassName('amount'));
+		document.getElementById('test').innerHTML = numValues;
+	}
 
 	function checkCurrentPortion() {
-		var x = document.getElementById('portion').value;
-
-
-			for(i = 0; i < elements.length; i++){
-			elements[i].innerHTML *= x;
-		}
+	
+	
 	}
 
