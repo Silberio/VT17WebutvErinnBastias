@@ -29,12 +29,7 @@ nav {
 	list-style-type: none;
 	}
 
-h1 {
-	margin: 0px 20px 0px 100px;
-	padding-left: 150px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
+
 
 section {
 	padding-left: 150px;
@@ -45,9 +40,20 @@ h1 {
 	color: white;
 	font-family: "Palatino Linotype";
 	font-size: 2.5em;
-	padding-left: 130px;
+	margin: 0px 20px 0px 100px;
+	padding-left: 150px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	text-shadow: -2px 0 #1a1a1a, 0 2px #1a1a1a, 2px 0 #1a1a1a, 0 -2px #1a1a1a;
 }
+
+h2 {
+	text-align: center;
+	color: white;
+	font-family: "Palatino Linotype";
+	text-shadow: -2px 0 #1a1a1a, 0 2px #1a1a1a, 2px 0 #1a1a1a, 0 -2px #1a1a1a;
+}
+
 
 figcaption {
 	color: white;
@@ -68,7 +74,7 @@ img {
 
 p {
 	padding-top: 10px;
-	padding-bottom: 15px;:
+	padding-bottom: 15px;
 }
 
 li {
@@ -76,7 +82,6 @@ li {
 	list-style-type: "\262D";
 	padding-left: 10px;
 	margin-left: 5px;
-	//make text bigger on hover
 }
 
 a {
@@ -133,15 +138,11 @@ color: white;
 #stars {
 	color: white;
 	font-size: 4em;
+/*	top: 70px; */
+	padding-top: 50px;
+	position: relative;
 }
 
 .star:hover {
 	color: yellow;
 }
-
-.star:active {
-	color: yellow;
-}
-
-
-
