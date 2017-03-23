@@ -57,3 +57,59 @@ function updateIngredients() {
 	setHTMLValues(newVal);
 	clearValues();
 }
+
+/*
+		*** RATING SCRIPT ***
+*/
+
+// API Key c272c7562dc7fda8
+"use strict"
+
+var stars = document.getElementsByClassName('star');
+
+	function changeStarColor(starVal){
+		for(var i = 0; i < starVal; i++) {
+
+			stars[i].style.color="yellow";
+		}
+        userVote(starVal);
+
+	}
+
+
+function userVote(starVal){
+    var voteRequest = new XMLHttpRequest();
+
+    voteRequest.open("GET", " https://edu.oscarb.se/sjk15/api/recipe/?api_key=c272c7562dc7fda8&recipe=muggkladdkaka&rating=" + starVal, true);
+    voteRequest.send();
+}
+
+/*
+function displayUpdateVote(){
+
+    var votes = document.getElementById("vote-result");
+
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function (){
+
+    if(this.readyState === 4 && this.status === 200){
+
+            var json = JSON.parse(this.responseText);
+
+                var sumOfVotes = json.rating.toFixed(1);
+
+                votes.innerHTML = "("+json.votes+" votes," + " avg " + sumOfVotes + " )";
+
+                updateStars(sumOfVotes);
+
+        }
+
+    };
+
+    xhttp.open("GET","https://edu.oscarb.se/sjk15/api/recipe/?api_key=c272c7562dc7fda8&recipe=muggkladdkaka",true);
+
+    xhttp.send();
+
+}
+*/

@@ -18,15 +18,14 @@
 		</nav>
 	</aside>
 
-<section>
 	<figure id="fig2">
 		<img id="mainimg" src="../resource/cakeinamug2.jpg" 
 		width="450">
 		<figcaption>Prova gärna med vispgrädde!</figcaption>
 	</figure>
-</section>
 
-<section class="maintext" >	
+<article class="maintext" >	
+	<h2>Recept</h2>
 	<article id="recipe">
 	<!--recept från: https://www.recepten.se/recept/muggkladdkaka.html -->
 		<ul>
@@ -50,7 +49,7 @@
 			<li>Sikta gärna florsocker över och servera med vispad grädde.</li>
 		</ul>
 	</article>
-</section>
+</article>
 
 <section id="ingredients">
 <h2>Ingredienser</h2>
@@ -107,15 +106,15 @@
 <section id="rating">
 	<article>
 		<p id="stars">
-			<span class="star">&#9733;</span>
-			<span class="star">&#9733;</span>
-			<span class="star">&#9733;</span>
-			<span class="star">&#9733;</span>
-			<span class="star">&#9733;</span>
+			<span onclick="changeStarColor(1)" class="star" id="1" value="1">&#9733;</span>
+			<span onclick="changeStarColor(2)" class="star" id="2" value="2">&#9733;</span>
+			<span onclick="changeStarColor(3)" class="star" id="3" value="3">&#9733;</span>
+			<span onclick="changeStarColor(4)" class="star" id="4" value="4">&#9733;</span>
+			<span onclick="changeStarColor(5)" class="star" id="5" value="5">&#9733;</span>
 		</p>
 	</article>
 </section>
 <script src="../script/script.js"></script>
-
+<script src="../script/ratingscript.js"></script>
 </body>
 </html>
