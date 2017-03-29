@@ -29,13 +29,6 @@ nav {
 	list-style-type: none;
 	}
 
-
-
-section {
-	padding-left: 150px;
-	padding-right: 150px;
-}
-
 h1 {
 	color: white;
 	font-family: "Palatino Linotype";
@@ -62,6 +55,7 @@ figcaption {
 
 figure {
 	margin-bottom: 15px;
+	padding-left: 15%;
 }
 
 img {
@@ -99,27 +93,32 @@ a:active {
 section.maintext {
 	background-image: url("../resource/dark_wood.png");
 	filter: invert(100%);
-	position: absolute;
-	padding: 10px 10px 10px 10px;
+	position: relative;
+	padding: 20px;
 	margin-right: 20%;
-	margin-left: 150px;
+	margin-left: 15%;
 	border-radius: 2px;
+
 }
 
 body {
 	margin-bottom: 50px;
 }
-
-#ingredients {
+section.ingredients {
 	background-image: url("../resource/purty_wood.png");
+	align-content: center;
 	position: relative;
-	padding-left: 45px;
-	margin-right: 200px;
-	margin-left: 600px;
-	margin-top: -600px;
+	float: right;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	left: -5%;
 	border-radius: 0px 25px 15px 0px;
+	display: inline-block;
 }
 
+#averageRating {
+	color: white;
+}
 
 #recipe {
 color: white;	
@@ -131,18 +130,26 @@ color: white;
 }
 
 #rating {
-	margin-top: 45%;
+	padding-left: 20%;
 	margin-right: auto;
 }
 
 #stars {
 	color: white;
 	font-size: 4em;
-/*	top: 70px; */
 	padding-top: 50px;
 	position: relative;
 }
 
 .star:hover {
+	color: #ffcc00;
+}
+
+.star:active {
 	color: yellow;
+}
+
+#averageRating {
+	font-family: "Palatino Linotype";
+	font-size: 1.2em;
 }

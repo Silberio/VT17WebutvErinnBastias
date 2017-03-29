@@ -7,7 +7,6 @@
 
 
 //the button which is used in the HTML
-
  document.getElementById("portions").addEventListener("change", updateIngredients);
 
  function initBaseValues(){
@@ -61,55 +60,62 @@ function updateIngredients() {
 /*
 		*** RATING SCRIPT ***
 */
+//Possible api key because I think i screwed up something: 4dfb406a7b686c95
 
 // API Key c272c7562dc7fda8
 "use strict"
 
 var stars = document.getElementsByClassName('star');
+var averageRating = document.getElementById('averageRating');
+var xmlHttp = new XMLHttpRequest();
 
-	function changeStarColor(starVal){
-		for(var i = 0; i < starVal; i++) {
-
-			stars[i].style.color="yellow";
-		}
+//listener
+function voteOnClick(starVal){
+		changeStarColor(starVal);
         userVote(starVal);
-
+        getAverageRatings();
+		resetStarColor(starVal);
 	}
 
+//this makes the rest of the non-clicked stars white
+function resetStarColor(starVal){
+	for(i = starVal; i < 5; i++) {
+        stars[i].style.color = "white";
+        //line 83 throws typeError: stars[i] is undefined.
+	}
+}
 
+//changes colors ofselected star and the ones behind
+function changeStarColor(starVal){
+    for(i = 0; i < starVal; i++){
+        stars[i].addEventListener('click', function(e){                  
+        });
+        stars[i].style.color = "#ffcc00";
+   	}
+}
+
+
+//This takes the numerial value of a star and sends it to API I think
 function userVote(starVal){
-    var voteRequest = new XMLHttpRequest();
 
-    voteRequest.open("GET", " https://edu.oscarb.se/sjk15/api/recipe/?api_key=c272c7562dc7fda8&recipe=muggkladdkaka&rating=" + starVal, true);
-    voteRequest.send();
+    xmlHttp.open("GET", " https://edu.oscarb.se/sjk15/api/recipe/?api_key=4dfb406a7b686c95&recipe=muggkladdkaka&rating=" + starVal, true);
+    xmlHttp.send();
 }
 
-/*
-function displayUpdateVote(){
+//AJAX - returns votes n rating n all that
+function getAverageRatings(){
 
-    var votes = document.getElementById("vote-result");
+	xmlHttp.onreadystatechange  = function() {
+		if(xmlHttp.readyState==4 && xmlHttp.status==200){
+		var data = JSON.parse(xmlHttp.responseText);
+		averageRating.innerHTML = "Rating: " + data.rating.toFixed(1) + " Votes: " + data.votes;
+		}
+	};
 
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function (){
-
-    if(this.readyState === 4 && this.status === 200){
-
-            var json = JSON.parse(this.responseText);
-
-                var sumOfVotes = json.rating.toFixed(1);
-
-                votes.innerHTML = "("+json.votes+" votes," + " avg " + sumOfVotes + " )";
-
-                updateStars(sumOfVotes);
-
-        }
-
-    };
-
-    xhttp.open("GET","https://edu.oscarb.se/sjk15/api/recipe/?api_key=c272c7562dc7fda8&recipe=muggkladdkaka",true);
-
-    xhttp.send();
-
+	xmlHttp.open("GET", "https://edu.oscarb.se/sjk15/api/recipe/?api_key=4dfb406a7b686c95&recipe=muggkladdkaka", true);
+	xmlHttp.send();
 }
-*/
+
+//run rating scrip on page loading
+// window.onload = getAverageRatings();
+window.onload = getAverageRatings();

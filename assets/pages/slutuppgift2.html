@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Recept - Muggkaka</title>
-
-	<link rel="stylesheet" type="text/css" href="../style/style.css">
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../style/style.css">
+	<title>Recept - Muggkaka</title>
 </head>
 
- <h1 id="heading">Muggkladdkaka</h1>
 
 <body>
+ <h1 id="heading">Muggkladdkaka</h1>
+
 	<aside>
 		<nav>
 			<ul>
@@ -24,34 +24,7 @@
 		<figcaption>Prova gärna med vispgrädde!</figcaption>
 	</figure>
 
-<article class="maintext" >	
-	<h2>Recept</h2>
-	<article id="recipe">
-	<!--recept från: https://www.recepten.se/recept/muggkladdkaka.html -->
-		<ul>
-			<li>
-			Ta fram en kopp som rymmer minst 2 dl. <!--change this into x amount of cups depending on portions-->
-			<p>Mät upp smöret och smält det i mikron genom att köra på medeleffekt ca 15 sekunder tills minst hälften av smöret smält. Ta ut och rör om tills allt smör smält om det inte redan är smält.</p>
-			</li>
-
-			<li>
-			Tillsätt resten av ingredienserna: kakao, strösocker, vetemjöl, vispgrädde, vaniljsocker och salt.
-			<p>Rör till en jämn smet utan klumpar.</p>
-			</li>
-
-			<li>
-			Kör i mikron på medelhög effekt i ca 60 sekunder (jag kör 650W men tänk på att microvågsugnar kan variera i effekt, särskilt äldre ugnar kan tappa effekt, så passa gärna kakan så den inte rinner över eller blir för torr).
-			<p>Kakan ska vara lite kladdig när den är klar.</p>
-
-			<p>Låt svalna lite.</p>
-			</li>
-		
-			<li>Sikta gärna florsocker över och servera med vispad grädde.</li>
-		</ul>
-	</article>
-</article>
-
-<section id="ingredients">
+<section class="ingredients">
 <h2>Ingredienser</h2>
 
 <article>
@@ -96,24 +69,48 @@
 		</li>
 
 	</ul>
-
-
-
-</article>
-	
-</section>
-
-<section id="rating">
-	<article>
-		<p id="stars">
-			<span onclick="changeStarColor(1)" class="star" id="1" value="1">&#9733;</span>
-			<span onclick="changeStarColor(2)" class="star" id="2" value="2">&#9733;</span>
-			<span onclick="changeStarColor(3)" class="star" id="3" value="3">&#9733;</span>
-			<span onclick="changeStarColor(4)" class="star" id="4" value="4">&#9733;</span>
-			<span onclick="changeStarColor(5)" class="star" id="5" value="5">&#9733;</span>
-		</p>
 	</article>
 </section>
+
+<section class="maintext">	
+	<h2>Recept</h2>
+	<article id="recipe">
+	<!--recept från: https://www.recepten.se/recept/muggkladdkaka.html -->
+		<ul>
+			<li>
+			Ta fram en kopp som rymmer minst 2 dl.
+			<p>Mät upp smöret och smält det i mikron genom att köra på medeleffekt ca 15 sekunder tills minst hälften av smöret smält. Ta ut och rör om tills allt smör smält om det inte redan är smält.</p>
+			</li>
+
+			<li>
+			Tillsätt resten av ingredienserna: kakao, strösocker, vetemjöl, vispgrädde, vaniljsocker och salt.
+			<p>Rör till en jämn smet utan klumpar.</p>
+			</li>
+
+			<li>
+			Kör i mikron på medelhög effekt i ca 60 sekunder (jag kör 650W men tänk på att microvågsugnar kan variera i effekt, särskilt äldre ugnar kan tappa effekt, så passa gärna kakan så den inte rinner över eller blir för torr).
+			<p>Kakan ska vara lite kladdig när den är klar.</p>
+
+			<p>Låt svalna lite.</p>
+			</li>
+		
+			<li>Sikta gärna florsocker över och servera med vispad grädde.</li>
+		</ul>
+	</article>
+</section>
+
+<article id="rating">
+		<p id="stars">
+			<span onclick="voteOnClick(1)" class="star" id="1">&#9733;</span>
+			<span onclick="voteOnClick(2)" class="star" id="2">&#9733;</span>
+			<span onclick="voteOnClick(3)" class="star" id="3">&#9733;</span>
+			<span onclick="voteOnClick(4)" class="star" id="4">&#9733;</span>
+			<span onclick="voteOnClick(5)" class="star" id="5">&#9733;</span>
+		</p>
+
+		<span id="averageRating">Rating: N/A Votes: N/A</span>
+</article>
+
 <script src="../script/script.js"></script>
 <script src="../script/ratingscript.js"></script>
 </body>
