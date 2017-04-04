@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+article {
+	padding: 15px;
+}
+
+span {
+	width: 25%;
+	display: block;
+	padding: 5px;
+	margin: 10px;
+	border-style: dashed;
+	border-width: 2px;
+	text-align: center;
+}
+
+@keyframes animationOne {
+	from {padding: 5px; margin: 15px; border-style: double;}
+	to {padding: 30px; margin: 20px; border-style: ridge;}
+
+}
+
+@keyframes animationTwo {
+	0% {color: #e21717; font-size: 1em; background-color: #1818e2; border-radius: 25%;}
+	40% {color: #1818e2; font-size: 1.5em; background-color: #e21717; border-radius: 60%;}
+	80% {color: #ffffff; font-size: 0.5em; background-color: #ffffff; border-radius: 100%;}
+	100% {color: #1a1c17; border-radius: 20%;}
+}
+
+@keyframes animationThree{
+	0% {text-align: right; text-decoration: overline}
+	25% {text-align: left; text-decoration: line-through}
+	50% {text-align: center; text-decoration: underline}
+	85% {text-align: right; text-decoration: line-through}
+	100% {text-align: left; text-decoration: overline}
+}
+
+/* Animation 1*/
+#partOne:hover {
+	animation-name: animationOne;
+	animation-duration: 5s;
+}
+
+/* Animation 2*/
+#firstElement:hover {
+	animation-name: animationTwo;
+	animation-duration: 2s;
+}
+
+/* Animation 3 */
+#secondElement {
+	animation-name: animationThree;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+/* Animation 4 */
+#thirdElement:hover {
+	animation-name: animationOne;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+}
+
+/* Animation 5 */
+#partTwo:hover {
+	animation-name: animationTwo, animationThree;
+	animation-duration: 6s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+
+}
+
+/* Animation 6 */
+#fourthElement {
+	animation-name: animationOne, animationTwo;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+}
+
+/* Animation 7 */
+#fifthElement:hover {
+	animation-name: animationThree, animationOne;
+	animation-duration: 2s;
+	animation-iteration-count: 3;
+	animation-delay: 2s;
+}
+
+/* Animation 8 */
+#sixthElement:hover {
+	animation-name: animationOne, animationTwo, animationThree;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+/* Animations that pause on hover */
+
+#fourthElement:hover, #secondElement:hover{
+	animation-play-state: paused;
+}

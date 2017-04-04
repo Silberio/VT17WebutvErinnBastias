@@ -1,0 +1,17 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#personNummer {
+	padding: 15px;
+	margin: 15px;
+}
+
+#inputField {
+}
+
+#outputField {
+	background-color: #d1d1d1;
+}
+
