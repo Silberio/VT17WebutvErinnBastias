@@ -6,17 +6,44 @@
 	<title>Uppgift 5</title>
 </head>
 <body>
-<article id="personNummer">
-	<span id="titlePersonNum">Personnummer:</span>
+<!-- PERSONNUMMERSVALIDERING -->
+<article class="InputForm">
+	<h2 id="titlePersonNum">Personnummer:</h2>
 
 	<div class="inputField">
 	<input type="text" name="personNum" id="personNumInput" maxlength="12">
-	<button type="submit" id="submitNumber" onclick="performValidityCheck()">Submit</button>
+	<button type="submit" class="submitBtn" onclick="performValidityCheck()">Check</button>
 	</div>
 
 	<span id="outputField"></span>
-
 </article>
+
+<!-- SKOTTÅR -->
+<article class="InputForm">
+	<h2 id="titleShotyear">Skottår: </h2>
+
+	<div class="inputField">
+		<input type="text" name="skottar" id="shotyearInput" maxlength="4">
+		<button type="submit" class="submitBtn" onclick="checkIfLeapyear()">Check</button>
+	</div>
+
+		<span id="leapYearOutput"></span>
+</article>
+
+
+<!-- SIFFERSUMMA -->
+<article class="InputForm">
+	<h2 id="titleCheckSum">Siffersumma: </h2>
+
+	<div class="inputField">
+		<input type="text" name="siffersumma" id="checkSumUserInput">
+		<button type="submit" class="submitBtn" onclick="checkNumber()">Calculate</button>
+	</div>
+
+	<span id="checkSumOutput"></span>
+</article>
+
+
 <script type="text/javascript" src="../script/uppgift5.js"></script>
 </body>
 </html>

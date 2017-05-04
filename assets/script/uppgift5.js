@@ -71,17 +71,90 @@ function luhnCheck(num) {
 }
 
 function outputValid(){
-	personNumOutput.innerHTML = "Valid ID Number!";
+	personNumOutput.innerHTML = "Giltig Personnummer!";
 	personNumOutput.style.backgroundColor = "#72e847";
 }
 
 function outputInvalid(){
-	personNumOutput.innerHTML = "Invalid ID Number!";
+	personNumOutput.innerHTML = "Ogiltig Personnummer!";
 	personNumOutput.style.backgroundColor = "#f20909";
 }
 
-/* CHECK IF SHOOT YEAR */
+/* ################## */
+/* CHECK IF SHOT YEAR */
+var leapyearInput = document.getElementById('shotyearInput');
+var leapyearOutput = document.getElementById('leapYearOutput');
+var year;
+
+function checkIfLeapyear() {
+	year = leapyearInput.value;
+	leapYearCalc(year);
+}
+
+function leapYearCalc(year){
+	if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+		isLeapYear(year);
+	} else
+	isNotLeapYear(year);
+}
+
+function isLeapYear(year) {
+	leapYearOutput.innerHTML = "" + year + " är skottår!"
+	leapyearOutput.style.backgroundColor = "#72e847";
+}
+
+function isNotLeapYear(year) {
+	leapyearOutput.innerHTML = "" + year + " är inte skottår!"
+	leapyearOutput.style.backgroundColor = "#f20909";
+}
 
 
-
+/* ################## */
 /* CHECK SUM OF NUMBER */
+var checkSumInput = document.getElementById('checkSumUserInput');
+var checkSumOutput = document.getElementById('checkSumOutput');
+var sumInput;
+var sum = 0;
+var digitArray = [];
+
+function checkNumber() {
+	addDigits(processSumInput());
+	printSum(sum);
+	clearArray();
+}
+
+function processSumInput(num){
+
+	sumInput = checkSumInput.value;
+	/* This takes the input digits (string) and converts into an array of numbers */
+	digits = (""+sumInput).split("");
+
+	for(var i = 0; i < digits.length; i++) {
+		digitArray.push(parseInt(digits[i]));
+	}	return digitArray;
+}
+
+function clearArray() {
+	digitArray = [];
+}
+
+function addDigits(num) {
+	var digitSum = 0;
+	for(var i = 0; i < num.length; i++) {
+		digitSum += num[i];
+	}
+	sum = digitSum;
+}
+
+function printSum(sum){
+	var outputString = sum.toString(); 
+
+	if(isNaN(sum)==true){
+		outputString = checkSumInput.value.toString();
+		checkSumOutput.innerHTML = outputString + " är inte ett nummer!";
+		checkSumOutput.style.backgroundColor = "#f20909";
+	} else if(isNaN(sum)==false){
+	checkSumOutput.innerHTML = "Total: " + outputString;
+	checkSumOutput.style.backgroundColor = "#72e847";
+	}
+}
