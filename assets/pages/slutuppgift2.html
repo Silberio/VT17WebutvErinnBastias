@@ -28,7 +28,7 @@
 <h2>Ingredienser</h2>
 
 <article>
-	<p>Portioner: </p>
+	<h2>Portioner: </h2>
 	<select class="selectionMenu" id="portions">
 		<option class="portion" value="1">1 Portion</option>
 		<option class="portion" value="2">2 Portion</option>
@@ -48,6 +48,73 @@
 		</li>
 
 		<li>
+			<span class="amount">1.5</span> msk strösocker
+		</li>
+
+		<li>
+			<span class="amount">1.5</span> msk vetemjöl
+		</li>
+
+		<li>
+			<span class="amount">1.5</span> msk vispgrädde eller mjölk
+
+		</li>
+
+		<li>
+			<span class="amount">0.5</span> tsk vaniljsocker
+		</li>
+
+		<li>
+			<span class="amount">0.5</span> krm salt
+		</li>
+
+	</ul>
+	</article>
+</section>
+
+<section class="maintext">	
+	<h2>Recept</h2>
+
+	<!--recept från: https://www.recepten.se/recept/muggkladdkaka.html -->
+		<ul>
+			<li>
+			Ta fram en kopp som rymmer minst 2 dl.
+			<p>Mät upp smöret och smält det i mikron genom att köra på medeleffekt ca 15 sekunder tills minst hälften av smöret smält. Ta ut och rör om tills allt smör smält om det inte redan är smält.</p>
+			</li>
+
+			<li>
+			Tillsätt resten av ingredienserna: kakao, strösocker, vetemjöl, vispgrädde, vaniljsocker och salt.
+			<p>Rör till en jämn smet utan klumpar.</p>
+			</li>
+
+			<li>
+			Kör i mikron på medelhög effekt i ca 60 sekunder (jag kör 650W men tänk på att microvågsugnar kan variera i effekt, särskilt äldre ugnar kan tappa effekt, så passa gärna kakan så den inte rinner över eller blir för torr).
+			<p>Kakan ska vara lite kladdig när den är klar.</p>
+
+			<p>Låt svalna lite.</p>
+			</li>
+		
+			<li>Sikta gärna florsocker över och servera med vispad grädde.</li>
+		</ul>
+</section>
+
+<article id="rating">
+<h2>Rösta gärna!</h2>
+		<p id="stars">
+			<span onclick="voteOnClick(1)" class="star" id="1">&#9733;</span>
+			<span onclick="voteOnClick(2)" class="star" id="2">&#9733;</span>
+			<span onclick="voteOnClick(3)" class="star" id="3">&#9733;</span>
+			<span onclick="voteOnClick(4)" class="star" id="4">&#9733;</span>
+			<span onclick="voteOnClick(5)" class="star" id="5">&#9733;</span>
+		</p>
+
+		<span id="averageRating">Rating: N/A Votes: N/A</span>
+</article>
+
+<script src="../script/script.js"></script>
+<script src="../script/ratingscript.js"></script>
+</body>
+</html>
 			<span class="amount">1.5</span> msk strösocker
 		</li>
 
