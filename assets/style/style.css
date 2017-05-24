@@ -47,7 +47,123 @@ h2 {
 	text-shadow: -2px 0 #1a1a1a, 0 2px #1a1a1a, 2px 0 #1a1a1a, 0 -2px #1a1a1a;
 }
 
+h3 {
+	filter: invert(100);
+}
 
+figcaption {
+	color: white;
+	text-shadow: -1px 0 #1a1a1a, 0 1px #1a1a1a, 1px 0 #1a1a1a, 0 -1px #1a1a1a;
+}
+
+figure {
+	margin-bottom: 15px;
+	padding-left: 15%;
+}
+
+img {
+	border-radius: 15%;
+	box-shadow: 5px 10px 10px 2px #000000; 
+	position: relative;
+	margin-bottom: 15px;
+	z-index: 999;
+	}
+
+p {
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+li {
+	padding-top: 5px;
+	list-style-type: "\262D";
+	padding-left: 10px;
+	margin-left: 5px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	color:red;
+}
+
+a:active {
+	color: white;
+}
+
+section.maintext {
+	background-image: url("../resource/dark_wood.png");
+	filter: invert(100%);
+	position: relative;
+	padding: 20px;
+	margin-right: 20%;
+	margin-left: 15%;
+	border-radius: 2px;
+
+}
+
+.maintext li {
+	filter: invert(100);
+}
+
+body {
+	margin-bottom: 50px;
+}
+section.ingredients {
+	background-image: url("../resource/purty_wood.png");
+	align-content: center;
+	position: relative;
+	float: right;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	left: -5%;
+	border-radius: 0px 25px 15px 0px;
+	display: inline-block;
+}
+
+#averageRating {
+	color: white;
+}
+
+#recipe {
+color: white;	
+}
+
+#info {
+
+	color: white;
+}
+
+#rating {
+	padding-left: 20%;
+	margin-right: auto;
+}
+
+#stars {
+	color: white;
+	font-size: 4em;
+	padding-top: 50px;
+	position: relative;
+}
+
+.star:hover {
+	color: #ffcc00;
+}
+
+.star:active {
+	color: yellow;
+}
+
+#averageRating {
+	font-family: "Palatino Linotype";
+	font-size: 1.2em;
+}
+
+.plcHolder {
+	display: none;
+}
 figcaption {
 	color: white;
 	text-shadow: -1px 0 #1a1a1a, 0 1px #1a1a1a, 1px 0 #1a1a1a, 0 -1px #1a1a1a;
